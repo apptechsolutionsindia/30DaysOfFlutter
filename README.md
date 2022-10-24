@@ -5,8 +5,8 @@
 ## 🧠 Concepts Covered:
 ## Demo
 ## Intro
-Chapter 1 (Flutter Installation & First App)
-Chapter 2 (Git, Dart Data Types & Scaffold)
+## Chapter 1 (Flutter Installation & First App)
+## Chapter 2 (Git, Dart Data Types & Scaffold)
 Chapter 3 (Functions, Classes, Routes, Theme & Text )
 Chapter 4 (Adding Images, Google Fonts | ElevatedButton | Login Page)
 Chapter 5 (Publish to Github | SingleChildScrollView | Navigator)
