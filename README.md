@@ -1,6 +1,6 @@
 # 30 Days Of Flutter
 
-A new Flutter project.
+Learn Flutter in 30 Days.
 
 ## Getting Started
 
