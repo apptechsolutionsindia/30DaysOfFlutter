@@ -145,3 +145,11 @@ Flutter is a quite new development framework, so in some cases you may not be ab
 ## Apps developed on Flutter
 
 The popularity of Flutter app development is constantly growing. Now Flutter is widely used to create apps for the likes of Alibaba, Yandex, Airbnb, Uber, eBay and other leading companies. Here is a selection of the top Flutter apps.
+
+**Thanks & Regards 
+Parvez Khan
+Software Engineer
+App Tech Solutions
++91-9479592970
+info@app-techsolutions.com
+https://www.app-techsolutions.com**
