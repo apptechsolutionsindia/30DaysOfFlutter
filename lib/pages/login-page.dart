@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:parvezfolio/utils/routes.dart';
 
 class LoginPage extends StatelessWidget {
   const LoginPage({super.key});
@@ -12,6 +13,7 @@ class LoginPage extends StatelessWidget {
           Image.asset(
             "assets/images/login_image.png",
             fit: BoxFit.cover,
+            height: 300,
           ),
           SizedBox(
             height: 20.0,
@@ -19,7 +21,7 @@ class LoginPage extends StatelessWidget {
           Text(
             "Admin",
             style: TextStyle(
-              fontSize: 24,
+              fontSize: 28,
               fontWeight: FontWeight.bold,
             ),
           ),
@@ -29,32 +31,34 @@ class LoginPage extends StatelessWidget {
           Padding(
             padding:
                 const EdgeInsets.symmetric(horizontal: 16.0, vertical: 32.0),
-            child: Column(
-              children: [
-                TextFormField(
-                  decoration: InputDecoration(
-                    hintText: "Enter username",
-                    labelText: "Username",
+            child: SingleChildScrollView(
+              child: Column(
+                children: [
+                  TextFormField(
+                    decoration: InputDecoration(
+                      hintText: "Enter username",
+                      labelText: "Username",
+                    ),
                   ),
-                ),
-                TextFormField(
-                  obscureText: true,
-                  decoration: InputDecoration(
-                    hintText: "Enter password",
-                    labelText: "Password",
+                  TextFormField(
+                    obscureText: true,
+                    decoration: InputDecoration(
+                      hintText: "Enter password",
+                      labelText: "Password",
+                    ),
                   ),
-                ),
-                SizedBox(
-                  height: 20.0,
-                ),
-                ElevatedButton(
-                  child: Text("Login"),
-                  style: TextButton.styleFrom(),
-                  onPressed: () {
-                    print("Hi, Parvez");
-                  },
-                )
-              ],
+                  SizedBox(
+                    height: 20.0,
+                  ),
+                  ElevatedButton(
+                    child: Text("Login"),
+                    style: TextButton.styleFrom(minimumSize: Size(150, 40)),
+                    onPressed: () {
+                      Navigator.pushNamed(context, MyRoutes.homeRoute);
+                    },
+                  )
+                ],
+              ),
             ),
           )
         ],
