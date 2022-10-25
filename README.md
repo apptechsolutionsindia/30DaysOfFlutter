@@ -2,9 +2,7 @@
 
 ## Learn Flutter in 30 Days.
 
-### A Student, Developer & Writer
 
-<img align="right" alt="GIF" src=""web/icons/Flutter-the-framework-for-cross-platform-applications-app-tech-solutions-bhopal-madhya-pradesh-india-1.png" width="500" height="320" />
 
 ## 🧠 Concepts Covered:
 ## Demo
