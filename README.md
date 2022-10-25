@@ -2,7 +2,7 @@
 
 ## Learn Flutter in 30 Days.
 
-<img align="right" alt="GIF" src="web/icons/Flutter-the-framework-for-cross-platform-applications-app-tech-solutions-bhopal-madhya-pradesh-india-1.png" width="1500" height="320" />
+<img align="right" alt="GIF" src="web/icons/Flutter-the-framework-for-cross-platform-applications-app-tech-solutions-bhopal-madhya-pradesh-india-1.png" width="1000" height="320" />
 
 ## 🧠 Concepts Covered:
 ## Demo
