@@ -6,6 +6,7 @@ import 'package:parvezfolio/utils/routes.dart';
 import 'pages/home_page.dart';
 
 void main() {
+  // ignore: prefer_const_constructors
   runApp(MyApp());
 }
 
@@ -18,13 +19,13 @@ class MyApp extends StatelessWidget {
       // home: HomePage(),
       themeMode: ThemeMode.light,
       theme: ThemeData(
-        primarySwatch: Colors.purple,
+        primarySwatch: Colors.deepPurple,
         fontFamily: GoogleFonts.lato().fontFamily,
         primaryTextTheme: GoogleFonts.latoTextTheme(),
       ),
-      // debugShowCheckedModeBanner: false,
+      debugShowCheckedModeBanner: false,
       darkTheme: ThemeData(brightness: Brightness.dark),
-      initialRoute: "/home",
+      initialRoute: MyRoutes.homeRoute,
       routes: {
         "/": (context) => LoginPage(),
         MyRoutes.homeRoute: (context) => HomePage(),

@@ -1,3 +1,4 @@
+// ignore: file_names
 import 'package:flutter/material.dart';
 import 'package:parvezfolio/utils/routes.dart';
 
@@ -15,50 +16,47 @@ class _LoginPageState extends State<LoginPage> {
   final _formKey = GlobalKey<FormState>();
 
   moveToHome(BuildContext context) async {
-    if (_formKey.currentState.validate()) {
-      setState(() {
-        changedButton = true;
-      });
+    setState(() {
+      changedButton = true;
+    });
 
-      await Future.delayed(Duration(seconds: 1));
-
-      await Navigator.pushNamed(context, MyRoutes.homeRoute);
-      setState(() {
-        changedButton = true;
-      });
-    }
+    await Future.delayed(Duration(seconds: 1));
+    await Navigator.pushNamed(context, MyRoutes.homeRoute);
+    setState(() {
+      changedButton = false;
+    });
   }
 
   @override
   Widget build(BuildContext context) {
     return Material(
       color: Colors.white,
-      child: Column(
-        children: [
-          Image.asset(
-            "assets/images/hey.png",
-            fit: BoxFit.cover,
-            height: 300,
-          ),
-          SizedBox(
-            height: 20.0,
-          ),
-          Text(
-            "Welcome $name",
-            style: TextStyle(
-              fontSize: 28,
-              fontWeight: FontWeight.bold,
+      child: Form(
+        key: _formKey,
+        child: Column(
+          children: [
+            Image.asset(
+              "assets/images/login_image.png",
+              fit: BoxFit.cover,
+              height: 300,
             ),
-          ),
-          SizedBox(
-            height: 20.0,
-          ),
-          Padding(
-            padding:
-                const EdgeInsets.symmetric(horizontal: 16.0, vertical: 32.0),
-            child: SingleChildScrollView(
-              child: Form(
-                key: _formKey,
+            SizedBox(
+              height: 20.0,
+            ),
+            Text(
+              "Welcome $name",
+              style: TextStyle(
+                fontSize: 28,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+            SizedBox(
+              height: 20.0,
+            ),
+            Padding(
+              padding:
+                  const EdgeInsets.symmetric(horizontal: 16.0, vertical: 32.0),
+              child: SingleChildScrollView(
                 child: Column(
                   children: [
                     TextFormField(
@@ -67,8 +65,8 @@ class _LoginPageState extends State<LoginPage> {
                         labelText: "Username",
                       ),
                       validator: (value) {
-                        if (value.isEmpty) {
-                          return "Username cannot be empty";
+                        if (value != null && value.isEmpty) {
+                          return 'Username cannot be empty';
                         }
                         return null;
                       },
@@ -84,10 +82,10 @@ class _LoginPageState extends State<LoginPage> {
                         labelText: "Password",
                       ),
                       validator: (value) {
-                        if (value.isEmpty) {
-                          return "Password cannot be empty";
-                        } else if (value.length < 6) {
-                          return "Password length  should be  at least 6";
+                        if (value != null && value.isEmpty) {
+                          return 'Password cannot be empty';
+                        } else if (value != null && value.length < 6) {
+                          return 'Password length should be atleast 6';
                         }
                         return null;
                       },
@@ -102,40 +100,43 @@ class _LoginPageState extends State<LoginPage> {
                     //     Navigator.pushNamed(context, MyRoutes.homeRoute);
                     //   },
                     // )
-                    Material(
-                      color: Colors.deepPurple,
-                      borderRadius:
-                          BorderRadius.circular(changedButton ? 50 : 8),
-                      child: InkWell(
-                        splashColor: Colors.red,
-                        onTap: () => moveToHome(context),
-                        child: AnimatedContainer(
-                          duration: Duration(seconds: 1),
-                          width: changedButton ? 50 : 150,
-                          height: 50,
-                          alignment: Alignment.center,
-                          child: changedButton
-                              ? Icon(
-                                  Icons.done,
-                                  color: Colors.white,
-                                )
-                              : Text(
-                                  "Login",
-                                  style: TextStyle(
-                                      color: Colors.white,
-                                      fontWeight: FontWeight.bold,
-                                      fontSize: 18),
-                                ),
-                        ),
+                    InkWell(
+                      onTap: () => moveToHome(context),
+                      child: AnimatedContainer(
+                        duration: Duration(seconds: 1),
+                        width: changedButton ? 50 : 150,
+                        height: 50,
+                        alignment: Alignment.center,
+                        child: changedButton
+                            ? Icon(
+                                Icons.done,
+                                color: Colors.white,
+                              )
+                            : Text(
+                                "Login",
+                                // ignore: prefer_const_constructors
+                                style: TextStyle(
+                                    color: Colors.white,
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: 18),
+                              ),
+                        decoration: BoxDecoration(
+                            color: Colors.deepPurple,
+                            // shape: changedButton
+                            //     ? BoxShape.circle
+                            //     : BoxShape.rectangle,
+                            borderRadius:
+                                BorderRadius.circular(changedButton ? 50 : 8)),
                       ),
                     ),
                   ],
                 ),
               ),
-            ),
-          )
-        ],
+            )
+          ],
+        ),
       ),
+
       // child: Center(
       //   child: Text(
       //     "Login Page",
