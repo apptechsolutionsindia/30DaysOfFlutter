@@ -20,7 +20,7 @@ final products = [
       id: "Codepur001",
       name: "IPhone 12 Pro",
       desc: "Apple iphone 12th generation",
-      price: 500,
-      color: "red",
+      price: 900,
+      color: "#33505a",
       image: "")
 ];
