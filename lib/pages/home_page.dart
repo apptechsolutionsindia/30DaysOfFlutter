@@ -47,15 +47,55 @@ class _HomePageState extends State<HomePage> {
       body: Padding(
         padding: const EdgeInsets.all(16.0),
         child: (CatelogModel.items != null && CatelogModel.items.isNotEmpty)
-            ? ListView.builder(
-                itemCount: CatelogModel.items.length,
+            ? GridView.builder(
+                gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                  crossAxisCount: 2,
+                  mainAxisSpacing: 16,
+                  crossAxisSpacing: 16,
+                ),
                 itemBuilder: (context, index) {
-                  return ItemWidget(
-                    item: CatelogModel.items[index],
-                  );
+                  final Item = CatelogModel.items[index];
+                  return Card(
+                      clipBehavior: Clip.antiAlias,
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(10)),
+                      child: GridTile(
+                          header: Container(
+                            // ignore: sort_child_properties_last
+                            child: Text(
+                              Item.name,
+                              // ignore: prefer_const_constructors
+                              style: TextStyle(color: Colors.white),
+                            ),
+                            padding: const EdgeInsets.all(12),
+                            // ignore: prefer_const_constructors
+                            decoration: BoxDecoration(
+                              color: Colors.deepPurple,
+                            ),
+                          ),
+                          // ignore: sort_child_properties_last
+                          child: Image.network(
+                            Item.image,
+                          ),
+                          footer: Container(
+                            // ignore: sort_child_properties_last
+                            child: Text(
+                              Item.price.toString(),
+                              // ignore: prefer_const_constructors
+                              style: TextStyle(color: Colors.white),
+                            ),
+                            padding: const EdgeInsets.all(12),
+                            // ignore: prefer_const_constructors
+                            decoration: BoxDecoration(
+                              color: Colors.black,
+                            ),
+                          )));
                 },
+                itemCount: CatelogModel.items.length,
               )
+            // ignore: prefer_const_constructors
             : Center(
+                // ignore: prefer_const_constructors
                 child: CircularProgressIndicator(),
               ),
       ),
