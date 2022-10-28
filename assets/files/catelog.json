@@ -1,0 +1,44 @@
+{
+    "products": [
+        {
+            "Id": 1,
+            "name": "Apple iPhone 12 Pro (Gold, 256GB)",
+            "desc": "Apple iPhone 12 Pro (Gold, 256GB)",
+            "price": 999,
+            "color": "#33505a",
+            "Image": "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcTsNmWXHfEeHSQE1s_KmLKkrROqtDcbc_QI44z1Ewi0jxyETJxwOpVRAZbP&usqp=CAc"
+        },
+        {
+            "Id": 2,
+            "name": "Apple iPhone 12 Pro 128 GB (Pacific Blue, 6 GB RAM) ",
+            "desc": "Apple iPhone 12 Pro 128 GB (Pacific Blue, 6 GB RAM)",
+            "price": 699,
+            "color": "#00ac51",
+            "Image": "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcTsNmWXHfEeHSQE1s_KmLKkrROqtDcbc_QI44z1Ewi0jxyETJxwOpVRAZbP&usqp=CAc"
+        },
+        {
+            "Id": 3,
+            "name": "Apple iPhone 12 (64GB) - Black",
+            "desc": "Apple iPhone 12 (64GB) - Black",
+            "price": 799,
+            "color": "#00ac51",
+            "Image": "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcT7c6YRcfiP-WkDiFFJ-z8oFq86SxPTIqRZLL9kOtElBKZUXC-q8osw_C1AdrFH4hEtU6Uw6XnoVKNxQdIQJvntu-Dg49JBWXQ7_Q&usqp=CAc"
+        },
+        {
+            "Id": 4,
+            "name": "Apple iPhone 13 Pro (128 GB) - Alpine Green",
+            "desc": "Apple iPhone 13 Pro (128 GB) - Alpine Green",
+            "price": "899",
+            "color": "#00ac51",
+            "Image": "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcTPgKxsVokFcBBK48oVJ1sZa0LwebmyO_Uodz3O6rNk7GIN4SABRJSElKNqeBsFiQfPB6n2tctYkNqQcqym43EEwm5jio2QaY74&usqp=CAc"
+        },
+        {
+            "Id": 5,
+            "name": "Apple iPhone 12 (128GB, White)",
+            "desc": "Apple iPhone 12 (128GB, White)",
+            "price": "999",
+            "color": "#00ac51",
+            "Image": "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcTA3UcgPRkwpOqTObTVJPinwEBuYs_T6ZtdT3h04TiCJf3HySCVR2x2m_q7X31daEm03yvVRPvsLz3I2keJSufV_pdiye_9Jz-A&usqp=CAc"
+        }
+    ]
+}
